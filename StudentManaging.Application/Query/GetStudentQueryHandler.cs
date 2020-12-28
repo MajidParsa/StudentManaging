@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using MediatR;
 using StudentManaging.Domain.AggregatesModel.StudentAggregate;
 
 namespace StudentManaging.Application.Query
 {
-	class GetStudentQueryHandler
+	public class GetStudentQueryHandler : IRequestHandler<GetStudentQuery, IEnumerable<Student>>
 	{
 		private readonly IStudentRepository _studentRepository;
 

@@ -30,7 +30,7 @@ namespace StudentManaging.API.Controllers
 	        if (student == null)
 		        return NotFound("Record(s) not found!");
 
-	        return Ok();
+	        return Ok(student);
         }
 
         [Authorize]
